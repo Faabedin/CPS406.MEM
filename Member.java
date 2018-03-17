@@ -1,10 +1,11 @@
-/**
- * Creates a Member  
- *
- * Generic member
- *
- * @author Rehan Hajee
- */
+package LoginSort;
+
+/*this makes a member- with a name, address, paid or not, and timesAttended */
+
+import java.util.LinkedList;
+import java.util.Stack;
+
+import javax.sound.midi.MidiDevice.Info;
 
 public class Member {
     String name, phoneNumber, address;
