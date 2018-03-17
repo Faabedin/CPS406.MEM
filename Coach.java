@@ -1,18 +1,15 @@
-package LoginSort;
-
-public class coach {
+public class Coach {
 	/*
 	 * 
 	 */
 	private String name, className;
 	
-	public coach(){};
+	public Coach(){};
 	
-	public coach(String name, String className){
+	public Coach(String name, String className){
 		this.name = name;
 		this.className = className;
 	}
 	public void addMember(String name, String phoneNumber, boolean paid, String address){
-		Member 
 	}
 }

@@ -1,16 +1,16 @@
-package LoginSort;
+
 
 import java.util.LinkedList;
 import java.util.Stack;
 
 
 
-public class login{
+public class Login{
 	int loginNumber;
 	String Password;
 	
-	public login(){};
-	public login(int loginNumber,String Password ){
+	public Login(){};
+	public Login(int loginNumber,String Password ){
 	if (loginNumber == 500){
 	
 	}
