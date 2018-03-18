@@ -1,9 +1,11 @@
-/*this makes a member- with a name, address, paid or not, and timesAttended */
+/**
+ * This makes a member- with a name, address, whether they have paid or not, and timesAttended 
+ */
 
 public class Member {
-    String name, phoneNumber, address;
-    int timesAttended, timesNotPaid; 
-	boolean paid;
+	private String name, phoneNumber, address;
+	private int timesAttended, timesPaid, timesNotPaid; 
+	private boolean paid;
 
     public Member() {
         name = "";
@@ -42,8 +44,12 @@ public class Member {
     
     public void setTimesNotPaid(int timesNotPaid) {
 		this.timesNotPaid = timesNotPaid;
-	}
-
+    }
+	
+    public void setTimesPaid(int timesPaid) {
+        this.timesPaid = timesPaid;
+    }
+	
     public String getName() {
         return name;
     }
@@ -65,9 +71,12 @@ public class Member {
     }
     
     public int getTimesNotPaid() {
-		return timesNotPaid;
-	}
-
+	return timesNotPaid;
+    }
+	
+    public int getTimesPaid() {
+        return timesPaid;
+    }
 
     @Override
     public String toString() {
