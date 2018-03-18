@@ -20,7 +20,6 @@ public class coach {
 		this.name = name;
 		this.className = className;
 		MemberList = new LinkedList();
-		//lesson = new Lesson();
 	}
 	public void addMember(String name, String phoneNumber, boolean paid, String address){
 		member = new Member(name,phoneNumber,paid,address);
@@ -30,14 +29,13 @@ public class coach {
 			NotPaidList.add(member);
 		}
 	}
-	public void scheduleClass(int month, int date, int time, String message){
-		lesson = new Lesson(month, date, time, message);
+	public void scheduleClass(int month, int date, int year, String message){
+		lesson = new Lesson(month,date,year,message);
 		lessonList.add(lesson);
 		
 	}
-	public void cancelClass(int month, int date, int time, String message){
+	public void cancelClass(){
 		
 	}
-
 	
 }
