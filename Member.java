@@ -1,3 +1,5 @@
+package LoginSort;
+
 /*this makes a member- with a name, address, paid or not, and timesAttended */
 
 import java.util.LinkedList;
@@ -7,8 +9,8 @@ import javax.sound.midi.MidiDevice.Info;
 
 public class Member {
     String name, phoneNumber, address;
-    int timesAttended;
-    boolean paid;
+    int timesAttended, timesNotPaid; 
+	boolean paid;
 
     public Member() {
         name = "";
@@ -44,6 +46,10 @@ public class Member {
     public void setTimesAttended(int timesAttended) {
         this.timesAttended = timesAttended;
     }
+    
+    public void setTimesNotPaid(int timesNotPaid) {
+		this.timesNotPaid = timesNotPaid;
+	}
 
     public String getName() {
         return name;
@@ -64,6 +70,11 @@ public class Member {
     public int getTimesAttended() {
         return timesAttended;
     }
+    
+    public int getTimesNotPaid() {
+		return timesNotPaid;
+	}
+
 
     @Override
     public String toString() {
