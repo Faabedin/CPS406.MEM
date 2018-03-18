@@ -28,7 +28,8 @@ public class coach {
 		}
 	}
 	public void scheduleClass(int month, int date, int year, String message){
-		lesson = new Lesson(month,date,year,message);
+		// TODO implement Lesson
+		// lesson = new Lesson(month,date,year,message);
 		lessonList.add(lesson);
 		
 	}
