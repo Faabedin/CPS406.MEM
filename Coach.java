@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class coach {
+public class Coach {
 	/*
 	 * 
 	 */
@@ -12,9 +12,9 @@ public class coach {
 	private LinkedList lessonList;
 
 
-	public coach(){};
+	public Coach(){};
 	
-	public coach(String name, String className){
+	public Coach(String name, String className){
 		this.name = name;
 		this.className = className;
 		MemberList = new LinkedList();

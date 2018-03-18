@@ -1,7 +1,7 @@
-public class tester {
+public class Tester {
 
 	public static void main(String[] args) {
-		coach CoachMarla = new coach("lisa","pilates");
+		Coach CoachMarla = new Coach("lisa","pilates");
 		// TODO implement Coach
 		/*
 		CoachMarla.addMember("rehan","0001114444", "27 Dundas Road", "False");

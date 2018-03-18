@@ -3,7 +3,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Display extends Application {
+public class App extends Application {
 	
 	// Window dimensions
 	public int windowSizeH = 500;
