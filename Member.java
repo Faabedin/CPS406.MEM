@@ -1,5 +1,3 @@
-package LoginSort;
-
 /*this makes a member- with a name, address, paid or not, and timesAttended */
 
 import java.util.LinkedList;

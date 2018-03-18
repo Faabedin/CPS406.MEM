@@ -1,6 +1,4 @@
-package LoginSort;
-
 public class Lesson {
-private int month;
+	private int month;
 
 }

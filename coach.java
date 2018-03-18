@@ -1,5 +1,3 @@
-package LoginSort;
-
 import java.util.LinkedList;
 
 public class coach {
