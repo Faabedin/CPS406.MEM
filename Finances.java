@@ -12,6 +12,7 @@ public class Finances {
 		System.out.println(allMembers.toString());
 	}
 	
+	// Test method, remove when class is finished
 	private static void PopulateList(ArrayList<Member> allMembers) {
 		Member m = new Member();
 		Member n = new Member();
@@ -36,9 +37,11 @@ public class Finances {
 	}
 	
 	// Get all members who have attended more than they have paid
+	// If they have attended more than they have paid, or if an instance of them not paying has been recorded, add them
+	// TODO how is timesNotPaid determined? if its unnecessary we should remove it
 	private static void SortMemberPay(ArrayList<Member> allMembers) {
 		for (int i = 0; i < allMembers.size(); i++) {
-			if (allMembers.get(i).getTimesAttended() > allMembers.get(i).getTimesPaid()) {
+			if (allMembers.get(i).getTimesAttended() > allMembers.get(i).getTimesPaid() || allMembers.get(i).getTimesNotPaid() > 0) {
 				unpaidMembers.add(allMembers.get(i));
 			}
 			
