@@ -8,11 +8,12 @@ public class Finances {
 	
 	// Number of meetings attended in a row until the member is eligible for a one time discount
 	private static int attendenceForDiscount = 12;
+	// Number of people awarded loyalty discount
+	private static int loyaltyDiscountPeople = 10;
 	
 	public static void main (String[] args) {
 		allMembers = new ArrayList<Member>();
 		PopulateList(allMembers);
-		sortMemberAttendence(allMembers);
 		System.out.println(allMembers.toString());
 	}
 	
@@ -35,11 +36,6 @@ public class Finances {
 		allMembers.add(q);
 	}
 	
-	// Sort list in descending order by number of times attended
-	private static void sortMemberAttendence(ArrayList<Member> allMembers) {
-		Collections.sort(allMembers, Collections.reverseOrder());
-	}
-	
 	// Get all members who have attended more than they have paid
 	// If they have attended more than they have paid, or if an instance of them not paying has been recorded, add them
 	// TODO how is timesNotPaid determined? if its unnecessary we should remove it
@@ -47,13 +43,12 @@ public class Finances {
 		for (int i = 0; i < allMembers.size(); i++) {
 			if (allMembers.get(i).getTimesAttended() > allMembers.get(i).getTimesPaid() || allMembers.get(i).getTimesNotPaid() > 0) {
 				unpaidMembers.add(allMembers.get(i));
-			}
-			
+			}	
 		}
 	}
 	
 	// Get consecutive discount
-	private static void getConsecutiveAttenceMembers() {
+	private static void consecutiveAward(ArrayList<Member> allMembers) {
 		for (int i = 0; i < allMembers.size(); i++) {
 			if (allMembers.get(i).getConsecutiveAttended() > attendenceForDiscount) {
 				// Reset consecutive attendance
@@ -62,6 +57,19 @@ public class Finances {
 				allMembers.get(i).incrementDiscountsAwarded(1);
 			}
 			
+		}
+	}
+	
+	// Get loyalty discount
+	private static void loyaltyAward(ArrayList<Member> allMembers) {
+		Collections.sort(allMembers, Collections.reverseOrder());
+		int count = loyaltyDiscountPeople;
+		for (int i = 0; i < count; i++) {
+			// Account for people who attend the same number of times
+			if (i > 1 && allMembers.get(i).getTimesAttended() == allMembers.get(i-1).getTimesAttended()) {
+				count++;
+			}
+			allMembers.get(i).incrementDiscountsAwarded(1);
 		}
 	}
 }
