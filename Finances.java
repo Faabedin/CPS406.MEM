@@ -4,8 +4,9 @@ public class Finances {
 	
 	private static ArrayList<Member> allMembers;
 	private static ArrayList<Member> unpaidMembers;
-	private float discount = 10;
-	
+	// Actual discount proportion
+	// To be calculated as multiple of original cost
+	private float discount = 0.9f;
 	// Number of meetings attended in a row until the member is eligible for a one time discount
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
@@ -14,7 +15,6 @@ public class Finances {
 	public static void main (String[] args) {
 		allMembers = new ArrayList<Member>();
 		PopulateList(allMembers);
-		loyaltyAward(allMembers);
 		System.out.println(allMembers.toString());
 	}
 	
@@ -85,7 +85,6 @@ public class Finances {
 				// Award discount
 				allMembers.get(i).incrementDiscountsAwarded(1);
 			}
-			
 		}
 	}
 	
