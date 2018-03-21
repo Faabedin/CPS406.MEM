@@ -2,7 +2,7 @@
  * This makes a member- with a name, address, whether they have paid or not, and timesAttended 
  */
 
-public class Member {
+public class Member implements Comparable<Member> {
 	private String name, phoneNumber, address;
 	private int timesAttended, timesPaid, timesNotPaid; 
 	private boolean paid, eligibleForDiscount;
@@ -89,6 +89,18 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Hello World!";
+        return Integer.toString(timesAttended);
+    }
+    
+    // Compare times attended between members
+    @Override
+    public int compareTo(Member otherMember) {
+    	int timesOtherAttended = otherMember.getTimesAttended();
+    	return this.timesAttended < timesOtherAttended ? -1 
+    		 : this.timesAttended > timesOtherAttended ? 1
+    		 : 0;
+    	// Simpler but worse performance
+    	// TODO test the performance between these algorithms
+    	//return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
     }
 }
