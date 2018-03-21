@@ -5,7 +5,7 @@
 public class Member {
 	private String name, phoneNumber, address;
 	private int timesAttended, timesPaid, timesNotPaid; 
-	private boolean paid;
+	private boolean paid, eligibleForDiscount;
 
     public Member() {
         name = "";
@@ -13,6 +13,7 @@ public class Member {
         address = "";
         timesAttended = 0;
         paid = false;
+        eligibleForDiscount = false;
     }
 
     public Member(String name, String phoneNumber, boolean paid, String address) {
@@ -49,6 +50,10 @@ public class Member {
     public void setTimesPaid(int timesPaid) {
         this.timesPaid = timesPaid;
     }
+    
+    public void setEligibleForDiscount(boolean eligibleForDiscount) {
+    	this.eligibleForDiscount = eligibleForDiscount;
+    }
 	
     public String getName() {
         return name;
@@ -64,6 +69,10 @@ public class Member {
 
     public boolean isPaid() {
         return paid;
+    }
+    
+    public boolean getEligibleForDiscount() {
+    	return eligibleForDiscount;
     }
 
     public int getTimesAttended() {
