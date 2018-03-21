@@ -4,21 +4,21 @@ public class Finances {
 	
 	private static ArrayList<Member> allMembers;
 	private static ArrayList<Member> unpaidMembers;
-	// Actual discount proportion
-	// To be calculated as multiple of original cost
+	// Actual discount proportion, to be calculated as multiple of original cost
 	private float discount = 0.9f;
 	// Number of meetings attended in a row until the member is eligible for a one time discount
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
 	private static int loyaltyDiscountPeople = 10;
 	
+	// Test method, remove when necessary
 	public static void main (String[] args) {
 		allMembers = new ArrayList<Member>();
 		PopulateList(allMembers);
 		System.out.println(allMembers.toString());
 	}
 	
-	// Test method, remove when class is finished
+	// Test method, remove when necessary
 	private static void PopulateList(ArrayList<Member> allMembers) {
 		Member m = new Member();
 		Member n = new Member();
