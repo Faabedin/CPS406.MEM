@@ -14,6 +14,7 @@ public class Finances {
 	public static void main (String[] args) {
 		allMembers = new ArrayList<Member>();
 		PopulateList(allMembers);
+		loyaltyAward(allMembers);
 		System.out.println(allMembers.toString());
 	}
 	
@@ -24,16 +25,44 @@ public class Finances {
 		Member o = new Member();
 		Member p = new Member();
 		Member q = new Member();
+		Member r = new Member();
+		Member s = new Member();
+		Member t = new Member();
+		Member u = new Member();
+		Member v = new Member();
+		Member w = new Member();
+		Member x = new Member();
+		Member y = new Member();
+		Member z = new Member();
 		m.setTimesAttended(5);
 		n.setTimesAttended(8);
 		o.setTimesAttended(2);
 		p.setTimesAttended(12);
 		q.setTimesAttended(7);
+		r.setTimesAttended(4);
+		s.setTimesAttended(3);
+		t.setTimesAttended(9);
+		u.setTimesAttended(8);
+		v.setTimesAttended(11);
+		w.setTimesAttended(12);
+		x.setTimesAttended(10);
+		y.setTimesAttended(6);
+		z.setTimesAttended(5);
 		allMembers.add(m);
 		allMembers.add(n);
 		allMembers.add(o);
 		allMembers.add(p);
 		allMembers.add(q);
+		allMembers.add(r);
+		allMembers.add(s);
+		allMembers.add(t);
+		allMembers.add(u);
+		allMembers.add(v);
+		allMembers.add(w);
+		allMembers.add(x);
+		allMembers.add(y);
+		allMembers.add(z);
+		
 	}
 	
 	// Get all members who have attended more than they have paid
