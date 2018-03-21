@@ -4,16 +4,18 @@
 
 public class Member implements Comparable<Member> {
 	private String name, phoneNumber, address;
-	private int timesAttended, timesPaid, timesNotPaid; 
-	private boolean paid, eligibleForDiscount;
+	private int timesAttended, timesPaid, timesNotPaid, consecutiveAttended, discountsAwarded; 
+	private boolean paid;
 
     public Member() {
         name = "";
         phoneNumber = "";
         address = "";
         timesAttended = 0;
+        consecutiveAttended = 0;
         paid = false;
-        eligibleForDiscount = false;
+        discountsAwarded = 0;
+        
     }
 
     public Member(String name, String phoneNumber, boolean paid, String address) {
@@ -43,6 +45,10 @@ public class Member implements Comparable<Member> {
         this.timesAttended = timesAttended;
     }
     
+    public void setConsecutiveAttended(int consecutiveAttended) {
+    	this.consecutiveAttended = consecutiveAttended;
+    }
+    
     public void setTimesNotPaid(int timesNotPaid) {
 		this.timesNotPaid = timesNotPaid;
     }
@@ -51,8 +57,12 @@ public class Member implements Comparable<Member> {
         this.timesPaid = timesPaid;
     }
     
-    public void setEligibleForDiscount(boolean eligibleForDiscount) {
-    	this.eligibleForDiscount = eligibleForDiscount;
+    public void setDiscountsAwarded(int discountsAwarded) {
+    	this.discountsAwarded = discountsAwarded;
+    }
+    
+    public void incrementDiscountsAwarded(int discountIncrement) {
+    	this.discountsAwarded += discountIncrement;
     }
 	
     public String getName() {
@@ -71,12 +81,16 @@ public class Member implements Comparable<Member> {
         return paid;
     }
     
-    public boolean getEligibleForDiscount() {
-    	return eligibleForDiscount;
+    public int getDiscountsAwarded() {
+    	return discountsAwarded;
     }
 
     public int getTimesAttended() {
         return timesAttended;
+    }
+    
+    public int getConsecutiveAttended() {
+    	return consecutiveAttended;
     }
     
     public int getTimesNotPaid() {
