@@ -117,4 +117,5 @@ public class Member implements Comparable<Member> {
     	// TODO test the performance between these algorithms
     	//return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
     }
+    
 }
