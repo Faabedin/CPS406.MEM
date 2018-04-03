@@ -15,7 +15,6 @@ public class Member implements Comparable<Member> {
         consecutiveAttended = 0;
         paid = false;
         discountsAwarded = 0;
-        
     }
 
     public Member(String name, String phoneNumber, boolean paid, String address) {
@@ -101,10 +100,12 @@ public class Member implements Comparable<Member> {
         return timesPaid;
     }
 
+/*
     @Override
     public String toString() {
         return Integer.toString(timesAttended);
     }
+    */
     
     // Compare times attended between members
     @Override
@@ -117,5 +118,4 @@ public class Member implements Comparable<Member> {
     	// TODO test the performance between these algorithms
     	//return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
     }
-    
 }
