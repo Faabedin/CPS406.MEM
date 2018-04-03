@@ -104,7 +104,11 @@ public class Finances {
 	public void MemberAttending(Member member, boolean paid) {
 		if (paid) {
 			member.setTimesPaid(member.getTimesPaid() + 1);
-			member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
+			if (member.getConsecutiveAttended() < attendenceForDiscount) {
+				member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
+			} else {
+				member.setConsecutiveAttended(0);
+			}
 		}
 		member.setTimesAttended(member.getTimesAttended() + 1);
 	}
