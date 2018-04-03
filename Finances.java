@@ -103,13 +103,18 @@ public class Finances {
 	}
 	
 	// Handle when a member attends
-	public void MemberAttending(Member member, boolean paid) {
+	public void MemberAttending(Member member, boolean paid, boolean useDiscount) {
 		if (paid) {
 			member.setTimesPaid(member.getTimesPaid() + 1);
 			if (member.getConsecutiveAttended() < attendenceForDiscount) {
 				member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
 			} else {
 				member.setConsecutiveAttended(0);
+			}
+			if (useDiscount) {
+				// Pay using discount
+			} else {
+				// Pay normally
 			}
 		}
 		member.setTimesAttended(member.getTimesAttended() + 1);
