@@ -101,10 +101,13 @@ public class Finances {
 	}
 	
 	// Handle when a member arrives
-	private static void MemberAttending(Member member, boolean paid) {
+	public void MemberAttending(Member member, boolean paid) {
 		if (paid) {
-			
+			member.setTimesPaid(member.getTimesPaid() + 1);
+			member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
 		}
 		member.setTimesAttended(member.getTimesAttended() + 1);
 	}
+	
+	
 }
