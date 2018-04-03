@@ -59,10 +59,6 @@ public class Member implements Comparable<Member> {
     public void setDiscountsAwarded(int discountsAwarded) {
     	this.discountsAwarded = discountsAwarded;
     }
-    
-    public void incrementDiscountsAwarded(int discountIncrement) {
-    	this.discountsAwarded += discountIncrement;
-    }
 	
     public String getName() {
         return name;

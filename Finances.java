@@ -83,7 +83,7 @@ public class Finances {
 				// Reset consecutive attendance
 				allMembers.get(i).setConsecutiveAttended(0);
 				// Award discount
-				allMembers.get(i).incrementDiscountsAwarded(1);
+				allMembers.get(i).setDiscountsAwarded(allMembers.get(i).getDiscountsAwarded() + 1);
 			}
 		}
 	}
@@ -97,7 +97,15 @@ public class Finances {
 			if (i > 1 && allMembers.get(i).getTimesAttended() == allMembers.get(i-1).getTimesAttended()) {
 				count++;
 			}
-			allMembers.get(i).incrementDiscountsAwarded(1);
+			allMembers.get(i).setDiscountsAwarded(allMembers.get(i).getDiscountsAwarded() + 1);
 		}
+	}
+	
+	// Handle when a member arrives
+	private static void MemberAttending(Member member, boolean paid) {
+		if (paid) {
+			
+		}
+		member.setTimesAttended(member.getTimesAttended() + 1);
 	}
 }
