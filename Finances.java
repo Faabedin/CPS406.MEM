@@ -100,7 +100,7 @@ public class Finances {
 		}
 	}
 	
-	// Handle when a member arrives
+	// Handle when a member attends
 	public void MemberAttending(Member member, boolean paid) {
 		if (paid) {
 			member.setTimesPaid(member.getTimesPaid() + 1);
@@ -109,5 +109,10 @@ public class Finances {
 		member.setTimesAttended(member.getTimesAttended() + 1);
 	}
 	
+	// Handle when a member doesn't attend
+	public void MemberNotAttending(Member member) {
+		// Reset consecutive visits
+		member.setConsecutiveAttended(0);
+	}
 	
 }
