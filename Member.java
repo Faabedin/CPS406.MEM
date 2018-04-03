@@ -4,7 +4,7 @@
 
 public class Member implements Comparable<Member> {
 	private String name, phoneNumber, address;
-	private int timesAttended, timesPaid, timesNotPaid, consecutiveAttended, discountsAwarded; 
+	private int timesAttended, timesPaid, consecutiveAttended, discountsAwarded; 
 	private boolean paid;
 
     public Member() {
@@ -48,9 +48,6 @@ public class Member implements Comparable<Member> {
     	this.consecutiveAttended = consecutiveAttended;
     }
     
-    public void setTimesNotPaid(int timesNotPaid) {
-		this.timesNotPaid = timesNotPaid;
-    }
 	
     public void setTimesPaid(int timesPaid) {
         this.timesPaid = timesPaid;
@@ -88,9 +85,6 @@ public class Member implements Comparable<Member> {
     	return consecutiveAttended;
     }
     
-    public int getTimesNotPaid() {
-	return timesNotPaid;
-    }
 	
     public int getTimesPaid() {
         return timesPaid;
