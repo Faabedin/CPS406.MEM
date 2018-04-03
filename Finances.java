@@ -10,6 +10,8 @@ public class Finances {
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
 	private static int loyaltyDiscountPeople = 10;
+	// Total balance of the club
+	private float balance = 0;
 	
 	// Test method, remove when necessary
 	public static void main (String[] args) {
@@ -117,6 +119,14 @@ public class Finances {
 	public void MemberNotAttending(Member member) {
 		// Reset consecutive visits
 		member.setConsecutiveAttended(0);
+	}
+	
+	public float getBalance() {
+		return balance;
+	}
+	
+	public void setBalance(float balance) {
+		this.balance = balance;
 	}
 	
 }
