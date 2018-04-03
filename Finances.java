@@ -10,8 +10,6 @@ public class Finances {
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
 	private static int loyaltyDiscountPeople = 10;
-	// Total balance of the club
-	private float balance = 0;
 	
 	// Test method, remove when necessary
 	public static void main (String[] args) {
@@ -105,17 +103,18 @@ public class Finances {
 	// Handle when a member attends
 	public void MemberAttending(Member member, boolean paid, boolean useDiscount) {
 		if (paid) {
-			member.setTimesPaid(member.getTimesPaid() + 1);
-			if (member.getConsecutiveAttended() < attendenceForDiscount) {
-				member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
-			} else {
-				member.setConsecutiveAttended(0);
-			}
+			// TODO implement payment method 
 			if (useDiscount) {
 				// Pay using discount
 			} else {
 				// Pay normally
 			}
+			member.setTimesPaid(member.getTimesPaid() + 1);
+			if (member.getConsecutiveAttended() < attendenceForDiscount) {
+				member.setConsecutiveAttended(member.getConsecutiveAttended() + 1);
+			} else {
+				member.setConsecutiveAttended(0);
+			}	
 		}
 		member.setTimesAttended(member.getTimesAttended() + 1);
 	}
@@ -125,13 +124,4 @@ public class Finances {
 		// Reset consecutive visits
 		member.setConsecutiveAttended(0);
 	}
-	
-	public float getBalance() {
-		return balance;
-	}
-	
-	public void setBalance(float balance) {
-		this.balance = balance;
-	}
-	
 }
