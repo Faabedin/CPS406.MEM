@@ -5,7 +5,7 @@ public class Finances {
 	private static ArrayList<Member> allMembers;
 	private static ArrayList<Member> unpaidMembers;
 	// Actual discount proportion, to be calculated as multiple of original cost
-	private float discount = 0.9f;
+	private final static float discount = 0.9f;
 	// Number of meetings attended in a row until the member is eligible for a one time discount
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
@@ -67,7 +67,7 @@ public class Finances {
 	
 	// Get all members who have attended more than they have paid
 	// If they have attended more than they have paid, or if an instance of them not paying has been recorded, add them
-	private static void getUnpaidMembers(ArrayList<Member> allMembers) {
+	public void getUnpaidMembers(ArrayList<Member> allMembers) {
 		for (int i = 0; i < allMembers.size(); i++) {
 			if (allMembers.get(i).getTimesAttended() > allMembers.get(i).getTimesPaid()) {
 				unpaidMembers.add(allMembers.get(i));
@@ -88,7 +88,7 @@ public class Finances {
 	}
 	
 	// Get loyalty discount
-	private static void loyaltyAward(ArrayList<Member> allMembers) {
+	private final static void loyaltyAward(ArrayList<Member> allMembers) {
 		Collections.sort(allMembers, Collections.reverseOrder());
 		int count = loyaltyDiscountPeople;
 		for (int i = 0; i < count; i++) {
