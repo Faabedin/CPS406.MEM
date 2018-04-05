@@ -2,8 +2,7 @@ class Lesson {
     private String message;
     private int month, date, year;
 
-
-    public Lesson(String message, int month, int date, int year) {
+    public Lesson(int month, int date, int year, String message) {
         this.message = message;
         this.month = month;
         this.date = date;
