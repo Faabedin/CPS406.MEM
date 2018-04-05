@@ -24,52 +24,52 @@ public class Treasurer {
 		ll = new ArrayList<>();
 	}
 	
-	public int getMemberPayment() {
-		return memberPayment;
-	}
-
 	public void setMemberPayment(int memberPayment) {
 		this.memberPayment = memberPayment;
+	}
+	
+	public void setCoachPayment(int coachPayment) {
+		this.coachPayment = coachPayment;
+	}
+	
+	public void setHallExpense(int hallExpense) {
+		this.hallExpense = hallExpense;
+	}
+	
+	public void setExpense(int expense) {
+		this.expense = expense;
+	}
+	
+	public void setRevenue(int revenue) {
+		this.revenue = revenue;
+	}
+	
+	public void setNetIncome(int netIncome) {
+		this.netIncome = netIncome;
+	}
+	
+	public int getMemberPayment() {
+		return memberPayment;
 	}
 
 	public int getCoachPayment() {
 		return coachPayment;
 	}
 
-	public void setCoachPayment(int coachPayment) {
-		this.coachPayment = coachPayment;
-	}
-
 	public int getHallExpense() {
 		return hallExpense;
-	}
-
-	public void setHallExpense(int hallExpense) {
-		this.hallExpense = hallExpense;
 	}
 
 	public int getRevenue() {
 		return revenue;
 	}
 
-	public void setRevenue(int revenue) {
-		this.revenue = revenue;
-	}
-
 	public int getExpense() {
 		return expense;
 	}
 
-	public void setExpense(int expense) {
-		this.expense = expense;
-	}
-	
 	public int getNetIncome() {
 		return netIncome;
-	}
-
-	public void setNetIncome(int netIncome) {
-		this.netIncome = netIncome;
 	}
 
 	public String incomeStatement(){
