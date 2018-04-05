@@ -66,13 +66,16 @@ public class Treasurer {
 
 
 	public String incomeStatement(){
+		int totalExpenses = coachPayment + hallExpense;
+		int profit = revenue - totalExpenses;
 		return "INCOME STATEMENT "+ "\n"+
 				"Revenues" + "\n" +
-				"\t" + "Member Payment" + "\t\t" + memberPayment + "\n" + 
+				"\t" + "Member Payment" + "\t\t$" + memberPayment + "\n" + 
 				"Operating Expenses" + "\n" +
-				"\t" + "Coach Payment" + "\t" + coachPayment + "\n" +
-				"\t" + "Hall Expense" + "\t" + hallExpense + "\n" +
-				"Total operating Expense" + "\t\t" + (coachPayment + hallExpense);
+				"\t" + "Coach Payment" + "\t$" + coachPayment + "\n" +
+				"\t" + "Hall Expense" + "\t$" + hallExpense + "\n" +
+				"Total operating Expense" + "\t\t$" + totalExpenses + "\n" + 
+				"Profit" + "\t\t\t\t$" + profit;
 	}
 }
 
