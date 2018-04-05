@@ -27,10 +27,11 @@ public class Coach {
 			NotPaidList.add(member);
 		}
 	}
-	public void scheduleClass(int month, int date, int year, String message){
+	public void scheduleLesson(int month, int date, int year, String message){
 		// TODO implement Lesson
 		// lesson = new Lesson(month,date,year,message);
-		lessonList.add(lesson);
+		//lessonList.add(lesson);
+		lessonList.add(new lesson(month, date, year, message);
 		
 		
 	}
