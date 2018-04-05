@@ -11,8 +11,7 @@ public class Coach {
 	private ArrayList NotPaidList;
 	private ArrayList lessonList; //Might be moved to another class
 
-
-	public Coach(){};
+	//public Coach(){};
 	
 	public Coach(String name, String className){
 		this.name = name;
@@ -31,12 +30,11 @@ public class Coach {
 		// TODO implement Lesson
 		// lesson = new Lesson(month,date,year,message);
 		//lessonList.add(lesson);
-		lessonList.add(new lesson(month, date, year, message);
-		
-		
+		lessonList.add(new Lesson(month, date, year, message);
 	}
-	public void cancelClass(){
-		
+	public void cancelClass(int month, int date, int year, String message ){
+		if (lessonList.contains(new Lesson(month, date, year, message))) 
+			lessonList.remove(new Lesson(month, date, year, message));
 	}
 	
 }
