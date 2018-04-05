@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Coach {
 	/*
@@ -7,9 +7,9 @@ public class Coach {
 	private String name, className;
 	private Member member;
 	private Lesson lesson;
-	private LinkedList MemberList;
-	private LinkedList NotPaidList;
-	private LinkedList lessonList;
+	private ArrayList MemberList;
+	private ArrayList NotPaidList;
+	private ArrayList lessonList; //Might be moved to another class
 
 
 	public Coach(){};
@@ -31,6 +31,7 @@ public class Coach {
 		// TODO implement Lesson
 		// lesson = new Lesson(month,date,year,message);
 		lessonList.add(lesson);
+		
 		
 	}
 	public void cancelClass(){
