@@ -17,6 +17,8 @@ public class Coach {
 		this.name = name;
 		this.className = className;
 		memberList = new ArrayList<>();
+		notPaidList = new ArrayList<>();
+		lessonList = new ArrayList<>();
 	}
 	public void addMember(String name, String phoneNumber, boolean paid, String address){
 		member = new Member(name, phoneNumber, paid, address);
