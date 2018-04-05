@@ -5,7 +5,7 @@ public class Finances {
 	private static ArrayList<Member> allMembers;
 	private static ArrayList<Member> unpaidMembers;
 	// Actual discount proportion, to be calculated as multiple of original cost
-	private final static float discount = 0.9f;
+	private final static float DISCOUNT = 0.9;
 	// Number of meetings attended in a row until the member is eligible for a one time discount
 	private static int attendenceForDiscount = 12;
 	// Number of people awarded loyalty discount
@@ -61,8 +61,7 @@ public class Finances {
 		allMembers.add(w);
 		allMembers.add(x);
 		allMembers.add(y);
-		allMembers.add(z);
-		
+		allMembers.add(z);	
 	}
 	
 	// Get all members who have attended more than they have paid
