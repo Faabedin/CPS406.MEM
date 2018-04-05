@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Treasurer {
 	int memberPayment,revenue;
 	int coachPayment,hallExpense,expense;
-	int netIncome;
+	//int netIncome;
 	//Linkedlist<int> ll;
 	ArrayList<Integer> ll;
 
@@ -19,7 +19,7 @@ public class Treasurer {
 		hallExpense = 1500;
 		revenue = memberPayment;
 		expense = coachPayment + hallExpense;
-		netIncome = revenue - expense;
+		//netIncome = revenue - expense;
 		//ll = new Linkedlist<int>();
 		ll = new ArrayList<>();
 	}
@@ -44,10 +44,6 @@ public class Treasurer {
 		this.revenue = revenue;
 	}
 	
-	public void setNetIncome(int netIncome) {
-		this.netIncome = netIncome;
-	}
-	
 	public int getMemberPayment() {
 		return memberPayment;
 	}
@@ -68,20 +64,15 @@ public class Treasurer {
 		return expense;
 	}
 
-	public int getNetIncome() {
-		return netIncome;
-	}
 
 	public String incomeStatement(){
-		return "INCOME STATEMENT "+ '\n'+
-				"Revenues" + '\n' +
-				'\t' + "Member Payment: " + '\t' + memberPayment + '\n' + 
-				"Operating Expenses" + '\n' +
-				'\t' + "Coach Payment: " + '\t' + coachPayment + '\n' +
-				'\t' + "Hall Expense: " +'\t' + hallExpense + '\n' +
-				 '\n' +
-				"Total operating Exppense" + '\t' + (coachPayment + hallExpense) + '\n'+
-				"Net Income" +'\t' + '\t' + netIncome;
+		return "INCOME STATEMENT "+ "\n"+
+				"Revenues" + "\n" +
+				"\t" + "Member Payment" + "\t\t" + memberPayment + "\n" + 
+				"Operating Expenses" + "\n" +
+				"\t" + "Coach Payment" + "\t" + coachPayment + "\n" +
+				"\t" + "Hall Expense" + "\t" + hallExpense + "\n" +
+				"Total operating Expense" + "\t\t" + (coachPayment + hallExpense);
 	}
 }
 
