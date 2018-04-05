@@ -73,14 +73,14 @@ public class Treasurer {
 	}
 
 	public String incomeStatement(){
-		ll.toString();
 		return "INCOME STATEMENT "+ '\n'+
-				"Revenue:" + '\n' +
+				"Revenues" + '\n' +
 				'\t' + "Member Payment: " + '\t' + memberPayment + '\n' + 
-				"Expenses:" + '\n' +
+				"Operating Expenses" + '\n' +
 				'\t' + "Coach Payment: " + '\t' + coachPayment + '\n' +
 				'\t' + "Hall Expense: " +'\t' + hallExpense + '\n' +
 				 '\n' +
+				"Total operating Exppense" + '\t' + (coachPayment + hallExpense) + '\n'+
 				"Net Income" +'\t' + '\t' + netIncome;
 	}
 }
