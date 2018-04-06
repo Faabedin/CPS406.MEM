@@ -7,16 +7,15 @@ import java.util.ArrayList;
 
 public class Coach {
 	
-	private String name, className;
+	private String name;
 	private Member member;
 	private Lesson lesson;
 	private ArrayList memberList;
 	private ArrayList notPaidList;
 	private ArrayList lessonList; //Might be moved to another class
 	
-	public Coach(String name, String className){
+	public Coach(String name){
 		this.name = name;
-		this.className = className;
 		memberList = new ArrayList<>();
 		notPaidList = new ArrayList<>();
 		lessonList = new ArrayList<>();
@@ -26,7 +25,7 @@ public class Coach {
 		MemberList.add(member);
 		if (!paid) notPaidList.add(member);
 	}
-	public void scheduleLesson(int month, int date, int year, String message){
+	public void scheduleLesson(String name, int month, int date, int year, String message){
 		lessonList.add(new Lesson(month, date, year, message);
 	}
 	public void cancelClass(int month, int date, int year, String message ){
