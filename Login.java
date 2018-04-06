@@ -66,9 +66,7 @@ class Login {
             try {
                 loginMap.put(fileScanner.next(), fileScanner.next());
             } catch (Exception ex) {
-                System.out.println("There was a problem reading the file. The login list has not been created.");
-                loginMap = new TreeMap<>();
-                break;
+		    
             }
         }
         fileScanner.close();
