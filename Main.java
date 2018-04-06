@@ -23,7 +23,7 @@ public class Main extends Application {
         saveFile();
     }
     
-    public static void saveFile() /*throws IOException */ {
+    public static void saveFile() throws IOException {
         FileWriter fw = new FileWriter(new File("saveLessons.txt"));
         PrintWriter pw = new PrintWriter(fw);
         //Iterator iterator = loginList.entrySet().iterator();
