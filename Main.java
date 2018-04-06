@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Main extends Application throws IOException {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,5 +18,21 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        saveFile();
+    }
+    
+    public static void saveFile() /*throws IOException */ {
+        FileWriter fw = new FileWriter(new File("saveLessons.txt"));
+        PrintWriter pw = new PrintWriter(fw);
+        //Iterator iterator = loginList.entrySet().iterator();
+        //Map.Entry entry;
+        while (iterator.hasNext()) {
+            for (int i = 0; i < loginList.size(); i++) {
+                //entry = (Map.Entry) iterator.next();
+                //pw.println(entry.getKey() + " " + entry.getValue());
+                pw.println("Lesson");
+            }
+        }
+        pw.close();
     }
 }
