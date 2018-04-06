@@ -1,43 +1,52 @@
 import java.io.*;
 import java.util.*;
 
-public static void main(String argz[]) {
-        Map<String, String> loginList = new Login().getLoginMap();
-        Scanner input = new Scanner(System.in); //remove when reading from button
+public static void main(String argz[]) { //Code here is temporary and will me moved where applicable
+	static Map<String, String> loginList; //CLASS VARIABLE!! MOVE WHERE APPLICABLE
+        
+	Scanner input = new Scanner(System.in); //remove when reading from button
         System.out.print("Username? "); //remove when reading from button
-        String username = input.next(); //textField.getText() or whatever
+        String username = input.next(); //textField.getText() ot whatever
         System.out.print("Password? "); //remove when reading from button
         String password = input.next(); //textField.getText() or whatever
+        boolean correctLogin = false;
+        int attempts = 3;
 
-        Iterator iterator = loginList.entrySet().iterator();
-        if (loginList.containsKey(username)) {
-            Map.Entry entry;
-            while (iterator.hasNext()) {
-                for (int i = 0; i < loginList.size(); i++) {
-                    entry = (Map.Entry) iterator.next();
-                    if (entry.getKey().equals(username) && entry.getValue().equals(password)) {
-                        System.out.println("Correct login."); //change to whatever
-                    } else {
-                        System.out.println("Incorrect login."); //change to whatever
-                    }
-                }
+        (!loginList.containsKey(username)) {
+            System.out.println("Incorrect login. ");
+            attempts--;
+            while (attempts !=0) {
+                System.out.print("Username? "); //remove ehrn
+                username = input.next();
+                System.out.print("Password? ");
+                password = input.next();
+                if (loginList.containsKey(username)) break;
+                System.out.println("Incorrect login. ");
+                attempts--;
             }
+        }
+
+        if (loginList.get(username).equals(password)) correctLogin = true;
+        
+	while (!loginList.get(username).equals(password) && !correctLogin && attempts != 0) {
+            System.out.println("Incorrect Password.");
+            attempts--;
+            System.out.print("Password? ");
+            password = input.next();
+            if (loginList.get(username).equals(password)) correctLogin = true;
+        }
+	
+        if (attempts == 0) {
+            System.out.println("You have been locked out. The program will now exit.");
+            System.exit(0);
+        }
+	
+        if (correctLogin) {
+            //Proceed action goes here
         }
     }
 
-class Login{
-	/*
-	int loginNumber;
-	String Password;
-	
-	public Login(){};
-	public Login(int loginNumber,String Password ){
-	if (loginNumber == 500){
-	
-	}
-	
-	}*/
-	
+class Login {
 	private Map<String,String> loginMap;
 
 	Login() {
