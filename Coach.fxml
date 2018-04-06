@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CoachController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="116.0" prefHeight="484.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Announcement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="46.0" layoutY="20.0" text="Announcement Title">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="46.0" layoutY="71.0" prefHeight="31.0" prefWidth="841.0" />
+                        <Label layoutX="46.0" layoutY="121.0" text="Announcement">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="46.0" layoutY="186.0" prefHeight="200.0" prefWidth="841.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Member List">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <TableView layoutX="5.0" prefHeight="445.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn prefWidth="163.0" text="Member Name" />
+                            <TableColumn prefWidth="372.0" text="Address" />
+                              <TableColumn prefWidth="152.0" text="Unpaid Dues?" />
+                              <TableColumn prefWidth="205.0" text="Phone Number" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="366.0" layoutY="51.0" text="Coach Panel">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="775.0" layoutY="63.0" text="Coach Name" />
+   </children>
+</AnchorPane>
