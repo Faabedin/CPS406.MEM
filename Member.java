@@ -7,16 +7,6 @@ public class Member implements Comparable<Member> {
 	private int timesAttended, timesPaid, consecutiveAttended, discountsAwarded; 
 	private boolean paid;
 
-    public Member() {
-        name = "";
-        phoneNumber = "";
-        address = "";
-        timesAttended = 0;
-        consecutiveAttended = 0;
-        paid = false;
-        discountsAwarded = 0;
-    }
-
     public Member(String name, String phoneNumber, boolean paid, String address) {
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -85,27 +75,12 @@ public class Member implements Comparable<Member> {
     	return consecutiveAttended;
     }
     
-	
     public int getTimesPaid() {
         return timesPaid;
     }
-
-/*
-    @Override
-    public String toString() {
-        return Integer.toString(timesAttended);
-    }
-    */
     
-    // Compare times attended between members
     @Override
     public int compareTo(Member otherMember) {
-    	int timesOtherAttended = otherMember.getTimesAttended();
-    	return this.timesAttended < timesOtherAttended ? -1 
-    		 : this.timesAttended > timesOtherAttended ? 1
-    		 : 0;
-    	// Simpler but worse performance
-    	// TODO test the performance between these algorithms
-    	//return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
+    	return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
     }
 }
