@@ -5,7 +5,7 @@ import java.util.ArrayList;
  *
  */
 
-public class Coach {
+class Coach {
 	
 	private String name;
 	private Member member;
@@ -14,7 +14,7 @@ public class Coach {
 	private ArrayList notPaidList;
 	private ArrayList lessonList; //Might be moved to another class
 	
-	public Coach(String name){
+	Coach(String name){
 		this.name = name;
 		memberList = new ArrayList<>();
 		notPaidList = new ArrayList<>();
