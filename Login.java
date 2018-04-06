@@ -51,7 +51,7 @@ class Login{
 
     private void readLoginFile() throws IOException {
 
-        Scanner fileScanner = new Scanner(new File("loginPass.txt");
+        Scanner fileScanner = new Scanner(new File("loginPass.txt"));
 
         while (fileScanner.hasNext()) {
             try {
