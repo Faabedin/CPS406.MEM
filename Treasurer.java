@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * 	incomestatement - revenue(member payment ) + expense(coach’s payments, hall expenses) 
  *member payment - (length of members - length of notPaid list) * (monthly payment amount) 
  */
-public class Treasurer {
+class Treasurer {
 	int memberPayment,revenue;
 	int coachPayment,hallExpense,expense;
 	//int netIncome;
@@ -13,7 +13,7 @@ public class Treasurer {
 	ArrayList<Integer> ll;
 
 
-	public Treasurer(){
+	Treasurer(){
 		memberPayment = 3000;// memberList.length() - memberNotPaidList.length()
  		coachPayment = 600;
 		hallExpense = 1500;
