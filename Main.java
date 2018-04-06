@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
-public class Main extends Application throws IOException {
+public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,7 +18,7 @@ public class Main extends Application throws IOException {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
         saveFile();
     }
