@@ -1,43 +1,81 @@
 import java.util.ArrayList;
 
-/**
- *
- *
- */
-
-class Coach {
-	
-	private String name;
-	private Member member;
-	private Lesson lesson;
-    private ArrayList memberList;
-    private ArrayList previosMembers;
-	private ArrayList notPaidList;
-	private ArrayList lessonList; //Might be moved to another class
-	
-	Coach(String name){
-		this.name = name;
-		memberList = new ArrayList<>();
-		notPaidList = new ArrayList<>();
-		lessonList = new ArrayList<>();
-	}
-	public void addMember(String name, String phoneNumber, boolean paid, String address){
-		member = new Member(name, phoneNumber, paid, address);
-		MemberList.add(member);
-        if (!paid) notPaidList.add(member);
-
-    public void removeMember(String name, String phoneNumber, boolean paid, String address){
-        mem = new Member(name, phoneNumber, paid, address);
-        if(memberList.contains(mem)) 
-            memberList.remove(mem);
-        previosMembers.add(mem);
-    }
-	}
-	public void scheduleLesson(String name, int month, int date, int year, String message){
-		lessonList.add(new Lesson(month, date, year, message);
-	}
-	public void cancelClass(int month, int date, int year, String message ){
-		if (lessonList.contains(new Lesson(month, date, year, message))) 
-			lessonList.remove(new Lesson(month, date, year, message));
-	}
-}
+public class Member implements Comparable<Member> {
+    	private String name, phoneNumber, address;
+    	private int timesAttended, timesPaid, consecutiveAttended, discountsAwarded; 
+    	private boolean paid;
+    
+        public Member(String name, String phoneNumber, boolean paid, String address) {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            this.paid = paid;
+            this.address = address;
+        }
+    
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        public void setAddress(String address) {
+            this.address = address;
+        }
+    
+        public void setPaid(boolean paid) {
+            this.paid = paid;
+        }
+    
+        public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
+    
+        public void setTimesAttended(int timesAttended) {
+            this.timesAttended = timesAttended;
+        }
+        
+        public void setConsecutiveAttended(int consecutiveAttended) {
+        	this.consecutiveAttended = consecutiveAttended;
+        }
+           public void setTimesPaid(int timesPaid) {
+                this.timesPaid = timesPaid;
+            }
+            
+            public void setDiscountsAwarded(int discountsAwarded) {
+            	this.discountsAwarded = discountsAwarded;
+            }
+        public String getName() {
+                    return name;
+                }
+            
+                public String getAddress() {
+                    return address;
+                }
+            
+                public String getPhoneNumber() {
+                    return phoneNumber;
+                }
+            
+                public boolean isPaid() {
+                    return paid;
+                }
+                
+                public int getDiscountsAwarded() {
+                	return discountsAwarded;
+                }
+            
+                public int getTimesAttended() {
+                    return timesAttended;
+                }
+                
+                public int getConsecutiveAttended() {
+                	return consecutiveAttended;
+                }
+                
+                public int getTimesPaid() {
+                    return timesPaid;
+                }
+                
+                @Override
+                public int compareTo(Member otherMember) {
+                	return Integer.compare(this.timesAttended, otherMember.getTimesAttended());
+                }
+            }
