@@ -31,8 +31,8 @@ class Coach {
 	public void scheduleLesson(String name, int month, int date, int year, String message){
 		lessonList.add(new Lesson(month, date, year, message);
 	}
-	public void cancelClass(int month, int date, int year, String message ){
-		if (lessonList.contains(new Lesson(month, date, year, message))) 
-			lessonList.remove(new Lesson(month, date, year, message));
+	public void cancelClass(String name, int month, int date, int year, String message ){
+		if (lessonList.contains(new Lesson(name, month, date, year, message))) 
+			lessonList.remove(new Lesson(name, month, date, year, message));
 	}
 }
