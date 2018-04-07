@@ -1,6 +1,3 @@
-
-
-import java.util.LinkedList;
 import java.util.ArrayList;
 
 
@@ -13,7 +10,7 @@ public class Treasurer {
 	int coachPayment,hallExpense,expense;
 	int netIncome, monthlyPayment;
 	Coach coach;
-	Arraylist coachList;
+	Arraylist<Coach> coachList;
 	ArrayList<Integer> ll;
 
 
@@ -24,13 +21,13 @@ public class Treasurer {
 		revenue = memberPayment;
 		expense = coachPayment + hallExpense;
 		netIncome = revenue - expense;
-		ll = new ArrayList<>();
+		coachList = new ArrayList<>();
 	}
 	
 	public int getMemberPayment(String name) {
 		for(i=0;i<coachList.length();i++){
 			if(coachList.get(i).getName().equals(name)){
-				coachList.get(i).memberPaid()* monthlyPayment;
+				return coachList.get(i).memberPaid()* monthlyPayment;
 			}
 		}
 	}
@@ -90,7 +87,6 @@ public class Treasurer {
 	}
 
 	public String incomeStatement(){
-		ll.toString();
 		return "INCOME STATEMENT "+ '\n'+
 				"Revenue:" + '\n' +
 				'\t' + "Member Payment: " + '\t' + memberPayment + '\n' + 
