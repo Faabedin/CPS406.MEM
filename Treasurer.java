@@ -11,25 +11,28 @@ import java.util.ArrayList;
 public class Treasurer {
 	int memberPayment,revenue;
 	int coachPayment,hallExpense,expense;
-	int netIncome;
+	int netIncome, monthlyPayment;
 	Coach coach;
 	Arraylist coachList;
 	ArrayList<Integer> ll;
 
 
 	public Treasurer(){
-		memberPayment = 3000;// memberList.length() - memberNotPaidList.length()
  		coachPayment = 600;
 		hallExpense = 1500;
+		monthlyPayment = 60; 
 		revenue = memberPayment;
 		expense = coachPayment + hallExpense;
 		netIncome = revenue - expense;
-		//ll = new Linkedlist<int>();
 		ll = new ArrayList<>();
 	}
 	
-	public int getMemberPayment() {
-		return memberPayment;
+	public int getMemberPayment(String name) {
+		for(i=0;i<coachList.length();i++){
+			if(coachList.get(i).getName().equals(name)){
+				coachList.get(i).memberPaid()* monthlyPayment;
+			}
+		}
 	}
 
 	public void setMemberPayment(int memberPayment) {
@@ -98,6 +101,4 @@ public class Treasurer {
 				"Net Income" +'\t' + '\t' + netIncome;
 	}
 	
-	
 }
-
